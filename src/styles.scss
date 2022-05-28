@@ -1,0 +1,85 @@
+$taskDivColor: #90ee90;
+$lineThrough: none;
+$mainDivColor: lightgoldenrodyellow;
+$checkDivPlacement: #000;
+body {
+    background-color: lightpink;
+    .mainDiv {
+        position: relative;
+        background-color: $mainDivColor;
+        width: 500px;
+        height: 600px;
+        margin: auto;
+        padding: 70px;
+        border: 2px solid $checkDivPlacement;
+        z-index: 2;
+        .taskDiv {
+            position: relative;
+            background-color: $taskDivColor;
+            border: 2px solid $checkDivPlacement;
+            height: 35px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            z-index: 0;
+            .label {
+                .checkbox:checked + .taskText {
+                    text-decoration: line-through;
+                }
+            }
+            .changeImg {
+                position: absolute;
+                right: 20px;
+                top: 25px;
+                height: 15px;
+                width: 15px;
+                text-align: center;
+            }
+            .rmImg {
+                position: absolute;
+                right: 40px;
+                top: 25px;
+                height: 15px;
+                width: 15px;
+                text-align: center;
+            }
+        }
+        .clearBtn {
+            position: absolute;
+            left: 490px;
+            top: 660px;
+            width: 70px;
+            height: 35px;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+        .inputDiv {
+            position: relative;
+            height: 30px;
+            width: 500px;
+            .input {
+                position: absolute;
+                width: 400px;
+                height: 30px;
+                margin-bottom: 30px;
+                margin-left: 10px;
+            }
+            .addBtn {
+                position: absolute;
+                top: -10px;
+                right: 0px;
+                width: 50px;
+                height: 35px;
+                border-radius: 10px;
+                margin: 10px;
+                font-weight: bold;
+                font-size: x-large;
+                color: white;
+                background-color: rgb(155, 0, 193);
+            }
+        }
+    }
+}
